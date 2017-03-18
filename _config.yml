@@ -1,4 +1,9 @@
+# Jekyll settings
 theme: jekyll-theme-slate
 
-title: Events list title
-tagline: Company name (optional)
+# Website values
+title: Title # (optional) use for events list title or organization name
+description: Organization name # (optional) use for events list title or organization name
+
+# Eventshaper data
+hash:
