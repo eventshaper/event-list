@@ -1,9 +1,20 @@
 # Jekyll settings
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal # in order to change template locally make change also in Gemfile
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: base # Comment out this to see how gem template default.html layout looks (works only with README.md)
 
 # Website values
+use_header: True # title & description displayed
 title: Title # (optional) use for events list title or organization name
 description: Organization name # (optional) use for events list title or organization name
+footer_content: # Add footer data if needed
 
 # Eventshaper data
-hash:
+domain: http://lvh.me:3000 # lvh.me example data
+hash: zmkg3b97omvtylnx # lvh.me example data
+locale: pl # locale to use for translations
