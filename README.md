@@ -7,7 +7,7 @@
 4. Rename *_index.html* to **index.html**
 5. Push to GitHub master branch of the new project
 6. Make GitHub project to serve Pages from master branch (in GitHub project *settings*)
-7. Under *evetshaper.github.io/project_name* you should see list of events for give organization
+7. Under *eventshaper.github.io/project_name* you should see list of events for give organization
 
 
 ### Example page
