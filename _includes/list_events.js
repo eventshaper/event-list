@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
       eventEl = document.getElementById("event-template"),
       locale = eventEl.getAttribute('data-locale'),
       domain = eventEl.getAttribute('data-domain'),
-      hash = eventEl.getAttribute('data-hash');
+      hash = eventEl.getAttribute('data-hash'),
+      type = window.listType || "cur"; // Should come from parent page (like index.html)
   try {
-    xhr.open('GET', (domain + "/events?hash=" + hash + "&locale=" + locale));
+    xhr.open('GET', (domain + "/events?hash=" + hash + "&locale=" + locale + "&type=" + type));
     xhr.send(null);
 
     xhr.onreadystatechange = function () {
@@ -22,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
             title: data[i].title,
             description: data[i].description
           });
+        }
+
+        if (!data.length) {
+          listEl.innerHTML += Mustache.render(eventTemplate, { title: "Brak" });
         }
 
         var anchors = document.getElementsByTagName('a');

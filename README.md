@@ -9,6 +9,11 @@
 6. Make GitHub project to serve Pages from master branch (in GitHub project *settings*)
 7. Under *eventshaper.github.io/project_name* you should see list of events for give organization
 
+### Custom domain
+1. In GitHub Project Settings, under Pages add *expected-domain.com* as custom domain
+2. Create CNAME **file** with the domain for the event list like *expected-domain.com*
+3. Add new A record for *expected-domain.com* that points to values 192.30.252.154 & 192.30.252.153
+
 
 ### Example page
 [Check how *{{ site.theme }}* template looks](example.html)
